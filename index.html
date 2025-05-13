@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SalGuard Insurance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">SalGuard</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero fade-in">
+    <div class="hero-content">
+      <h1>Your Protection. Our Promise.</h1>
+      <p>Insurance that adapts to your life. Trusted. Transparent. Tech-enabled.</p>
+      <button onclick="changeWelcomeText()">Get Started</button>
+    </div>
+  </section>
+
+  <!-- About + Services -->
+  <section class="info-section fade-in">
+    <div class="info-container">
+      <div class="info-card slide-in-left" id="about">
+        <h2>About SalGuard</h2>
+        <p>We simplify insurance with digital-first solutions. Powered by AI. Backed by people.</p>
+        <button id="hoverBtn" onclick="highlightAbout()">Why Choose Us?</button>
+      </div>
+      <div class="info-card slide-in-left" id="services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Health & Life Insurance</li>
+          <li>Auto & Property Coverage</li>
+          <li>Microinsurance for Gig Workers</li>
+          <li>Blockchain-Based Claims</li>
+        </ul>
+        <button onclick="addService()">Add a Service</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery fade-in">
+    <h2>Explore Our Visuals</h2>
+    <img id="galleryImg" src="images/insur.jpg" alt="Gallery Image">
+    <button id="nextImg">Next Image</button>
+  </section>
+
+  <!-- Accordion FAQ -->
+  <section class="accordion fade-in">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion-item">
+      <button class="accordion-toggle">What is SalGuard?</button>
+      <div class="accordion-content">SalGuard is a digital-first insurance platform for all your needs.</div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-toggle">How do I file a claim?</button>
+      <div class="accordion-content">You can file claims via our mobile app or website in under 5 minutes.</div>
+    </div>
+  </section>
+
+  <!-- Keyboard Detection -->
+  <section class="keyboard fade-in">
+    <h2>Try Typing Below</h2>
+    <input type="text" id="keyInput" placeholder="Type something..." />
+    <p>Last key pressed: <span id="keyDisplay">None</span></p>
+  </section>
+
+  <!-- Double Click -->
+  <section class="fade-in">
+    <button id="secretBtn">Double-click me 🤫</button>
+    <p id="secretMessage" class="hidden">🎉 You found the secret treasure feature!</p>
+  </section>
+
+  <!-- Contact Form with Validation -->
+  <section class="form-section fade-in" id="contact-section">
+    <h2 id="contact">Contact Us</h2>
+    <form id="signupForm">
+      <label>Email:
+        <input type="email" id="email" required />
+        <small class="error-message" id="emailError"></small>
+      </label>
+      <label>Password:
+        <input type="password" id="password" required />
+        <small class="error-message" id="passwordError"></small>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 SalGuard Insurance</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

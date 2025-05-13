@@ -1,0 +1,289 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2 {
+  color: #003049;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  background-color: #ffb703;
+  color: #003049;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.2s ease-in-out;
+}
+
+.hover-button:hover {
+  background-color: #2ecc71; /* Green */
+  transform: scale(1.1);   /* Slight zoom-in */
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Navbar */
+.navbar {
+  background-color: #003049;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0077b6, #0096c7);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Info Section */
+.info-section {
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.info-card {
+  background-color: #eaf4f4;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2 {
+  margin-bottom: 1rem;
+}
+
+/* Hover Button Demo */
+#hoverBtn:hover {
+  background-color: #90e0ef;
+}
+
+/* Gallery */
+.gallery {
+  text-align: center;
+  padding: 2rem;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+/* Accordion */
+.accordion {
+  padding: 2rem;
+}
+
+.accordion h2 {
+  margin-bottom: 1rem;
+}
+
+.accordion-toggle {
+  display: block;
+  background: #ccc;
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background: #f9f9f9;
+  margin-bottom: 1rem;
+}
+
+/* Keyboard Detection */
+.keyboard {
+  padding: 2rem;
+  text-align: center;
+}
+
+.keyboard input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#keyDisplay {
+  font-weight: bold;
+}
+
+/* Double Click Message */
+.hidden {
+  display: none;
+}
+
+/* Contact Section / Form */
+.form-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.form-section form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #003049;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer a {
+  color: #ffb703;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+.fade-in,
+.slide-in-left {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.in-view.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.in-view.slide-in-left {
+  animation: slideLeft 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .info-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
